@@ -14,5 +14,5 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     print("Hello")
-    parsedPDF = parser.from_file("Koc-Holding-2018-Annual-Report.pdf", xmlContent=True)
+    #parsedPDF = parser.from_file("Koc-Holding-2018-Annual-Report.pdf", xmlContent=True)
     return uploadedFile
