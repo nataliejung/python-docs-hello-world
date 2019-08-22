@@ -2,17 +2,16 @@ from flask import Flask
 import tika
 from tika import parser
 
-print("initiating tika")
+
 tika.initVM()
-print("initiating VM")
-version = tika.__version__
-print("tika version: " + version)
+#version = tika.__version__
 
 uploadedFile = "Koc-Holding-2018-Annual-Report.pdf"
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    print("Hello")
+    parsedPDF = parser.from_file(uploadedFile)
+    text = parsedPDF["content"]
     #parsedPDF = parser.from_file("Koc-Holding-2018-Annual-Report.pdf", xmlContent=True)
-    return version
+    return text
