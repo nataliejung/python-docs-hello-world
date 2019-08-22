@@ -1,6 +1,9 @@
 from flask import Flask
+from tika import parser
+
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello 22 August"
+    version = tika.__version__
+    return version
