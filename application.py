@@ -21,7 +21,7 @@ def hello():
     #text = parsedPDF["content"]
     extract_pdf("Koc-Holding-2018-Annual-Report.pdf","test.txt" )
     #parsedPDF = parser.from_file("Koc-Holding-2018-Annual-Report.pdf", xmlContent=True)
-    return str(test.txt)
+    return "Hello World"
 
 
 def extract_pdf(source_pdf:str,target_txt:str):
