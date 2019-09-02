@@ -20,8 +20,9 @@ def hello():
     #parsedPDF = parser.from_file(uploadedFile)
     #text = parsedPDF["content"]
     extract_pdf("Koc-Holding-2018-Annual-Report.pdf","test.txt" )
-    #parsedPDF = parser.from_file("Koc-Holding-2018-Annual-Report.pdf", xmlContent=True)
-    return "Hello World"
+    parsedPDF = parser.from_file("Koc-Holding-2018-Annual-Report.pdf", xmlContent=True)
+    text = parsedPDF["content"]
+    return text
 
 
 def extract_pdf(source_pdf:str,target_txt:str):
